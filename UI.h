@@ -8,8 +8,6 @@
     #include <wx/wx.h>
 #endif
 
-using namespace std;
-
 class MyApp : public wxApp {
 	public:
 		virtual bool OnInit();  
@@ -24,12 +22,13 @@ class MyCode : public wxTextCtrl {
 		void Highlight( wxString cde );
 
 	private:
-		/*string Keywords[] = {"alignas","alignof","and","and_eq","asm","atomic_cancel","atomic_commit","atomic_noexcept","auto","bitand","bitor","bool","break","case","catch","char",
-		"char16_t","char32_t","class","compl","concept","const","constexpr","const_cast","continue","decltype","default","delete","do","double","dynamic_cast","else","enum",
-		"explicit","export","extern","false","float","for","friend","goto","if","inline","int","import","long","module","mutable","namespace","new","noexcept","not","not_eq",
-		"nullptr","operator","or","or_eq","private","protected","public","register","reinterpret_cast","requires","return","short","signed","sizeof","static","static_assert",
-		"static_cast","struct","switch","synchronized","template","this","thread_local","throw","true","try","typedef","typeid","typename","union","unsigned","using","virtual",
-		"void","volatile","wchar_t","while","xor","xor_eq"};*/
+		std::string Keywords[150] = {"alignas","alignof","and","and_eq","asm","atomic_cancel","atomic_commit","atomic_noexcept","auto","bitand","bitor","bool","break","case","catch","char",
+			"char16_t","char32_t","class","compl","concept","const","constexpr","const_cast","continue","decltype","default","delete","do","double","dynamic_cast",
+			"else","enum","explicit","export","extern","false","float","for","friend","goto","if","inline","int","import","long","module","mutable","namespace","new",
+			"noexcept","not","not_eq","nullptr","operator","or","or_eq","private","protected","public","register","reinterpret_cast","requires","return","short","signed",
+			"sizeof","static","static_assert","static_cast","struct","switch","synchronized","template","this","thread_local","throw","true","try","typedef","typeid",
+			"typename","union","unsigned","using","virtual","void","volatile","wchar_t","while","xor","xor_eq","override","final","transaction_safe","transaction_safe_dynamic",
+			"elif","endif","defined","ifdef","ifndef","define","undef","include","line","error","pragma","_Pragma"};
 		int a;
 		DECLARE_EVENT_TABLE() 
 };
